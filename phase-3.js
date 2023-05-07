@@ -4,16 +4,35 @@ function addNums10Timing(increment) {
   // Copy your `addNums10` code here
   // Then, add timing code
 
-  // Your code here
+  let nums = [];
 
+  for (let i = increment; i <= 10 * increment; i+= increment) {
+    console.time('addnums');
+    let el = addNums(i);
+    console.timeLog('addnums');
+    nums.push(el);
+    console.timeEnd('addnums');
+  }
+
+  return nums;
 }
-
 
 function addManyNums10Timing(increment) {
 // Copy your `addManyNums10` code here
 // Then, add timing code
 
-  // Your code here
+let nums = [];
+for (let i = increment; i <= 10 * increment; i += increment) {
+  console.time('addManyNums10Timing');
+  let num = addManyNums(i);
+  console.timeLog('addManyNums10Timing');
+
+  nums.push(num);
+
+  console.timeEnd('addManyNums10Timing');
+}
+
+return nums;
 
 }
 
